@@ -59,7 +59,7 @@ git checkout main
 ssh -i your-key.pem ubuntu@43.205.192.171
 
 # Navigate to project
-cd /home/ubuntu/apps/whatsapp-broadcast-saas
+cd /home/ubuntu/apps/AI-Salesmate-Broadcast
 
 # Pull latest changes
 git pull origin main
@@ -327,7 +327,7 @@ whatsapp-broadcast-saas/
 - **Local**: http://localhost:8080
 - **Production**: http://43.205.192.171 (or your domain)
 - **Supabase Dashboard**: https://app.supabase.com
-- **GitHub Repo**: https://github.com/YOUR_USERNAME/whatsapp-broadcast-saas
+- **GitHub Repo**: https://github.com/YOUR_USERNAME/AI-Salesmate-Broadcast
 
 ---
 

@@ -46,8 +46,8 @@ mkdir -p apps
 cd apps
 
 # Clone your repository
-git clone https://github.com/YOUR_USERNAME/whatsapp-broadcast-saas.git
-cd whatsapp-broadcast-saas
+git clone https://github.com/YOUR_USERNAME/AI-Salesmate-Broadcast.git
+cd AI-Salesmate-Broadcast
 
 # Install dependencies
 npm install
@@ -215,7 +215,7 @@ pm2 stop whatsapp-broadcast
 ssh -i your-key.pem ubuntu@43.205.192.171
 
 # Navigate to project
-cd /home/ubuntu/apps/whatsapp-broadcast-saas
+cd /home/ubuntu/apps/AI-Salesmate-Broadcast
 
 # Pull latest changes
 git pull origin main

@@ -103,8 +103,8 @@ git push -u origin main
 3. **Clone & Setup**:
    ```bash
    cd /home/ubuntu/apps
-   git clone https://github.com/YOUR_USERNAME/whatsapp-broadcast-saas.git
-   cd whatsapp-broadcast-saas
+   git clone https://github.com/YOUR_USERNAME/AI-Salesmate-Broadcast.git
+   cd AI-Salesmate-Broadcast
    npm install
    ```
 

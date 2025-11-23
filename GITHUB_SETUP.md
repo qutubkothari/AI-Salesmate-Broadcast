@@ -7,8 +7,8 @@ Follow these steps to create a GitHub repository and push your code.
 1. Go to [GitHub](https://github.com)
 2. Click the **"+"** icon in the top-right corner
 3. Select **"New repository"**
-4. Fill in the details:
-   - **Repository name**: `whatsapp-broadcast-saas`
+3. Fill in the details:
+   - **Repository name**: `AI-Salesmate-Broadcast`
    - **Description**: Multi-tenant WhatsApp Broadcast System with Desktop Agent & Waha Cloud
    - **Visibility**: Choose **Private** (recommended) or **Public**
    - **DO NOT** initialize with README, .gitignore, or license (we already have these)
@@ -20,7 +20,7 @@ After creating the repository, GitHub will show you commands. Use these:
 
 ```bash
 # Add GitHub remote (replace YOUR_USERNAME with your GitHub username)
-git remote add origin https://github.com/YOUR_USERNAME/whatsapp-broadcast-saas.git
+git remote add origin https://github.com/YOUR_USERNAME/AI-Salesmate-Broadcast.git
 
 # Rename branch to main (if needed)
 git branch -M main
