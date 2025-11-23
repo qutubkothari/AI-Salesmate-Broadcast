@@ -11,6 +11,7 @@ if (!supabaseUrl || !supabaseKey) {
 const supabase = supabaseUrl && supabaseKey 
     ? createClient(supabaseUrl, supabaseKey, {
         auth: {
+            autoRefreshToken: false,
             persistSession: false
         }
     })
