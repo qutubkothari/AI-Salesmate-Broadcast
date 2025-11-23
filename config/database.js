@@ -6,9 +6,14 @@ const supabaseKey = process.env.SUPABASE_KEY;
 if (!supabaseUrl || !supabaseKey) {
     console.error('❌ Missing Supabase credentials!');
     console.error('Set SUPABASE_URL and SUPABASE_KEY in .env file');
-    process.exit(1);
 }
 
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = supabaseUrl && supabaseKey 
+    ? createClient(supabaseUrl, supabaseKey, {
+        auth: {
+            persistSession: false
+        }
+    })
+    : null;
 
 module.exports = { supabase };
