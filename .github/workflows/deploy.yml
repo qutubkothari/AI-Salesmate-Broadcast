@@ -1,0 +1,48 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
+          script: |
+            echo "🚀 Starting deployment..."
+            
+            # Navigate to app directory
+            cd /home/ubuntu/apps/AI-Salesmate-Broadcast || exit 1
+            
+            # Pull latest changes
+            echo "📥 Pulling latest code..."
+            git pull origin main
+            
+            # Install/update dependencies
+            echo "📦 Installing dependencies..."
+            npm install --production
+            
+            # Restart application with PM2
+            echo "🔄 Restarting application..."
+            pm2 restart whatsapp-broadcast-saas || pm2 start server.js --name whatsapp-broadcast-saas
+            
+            # Save PM2 configuration
+            pm2 save
+            
+            # Show status
+            echo "✅ Deployment complete!"
+            pm2 status
+            pm2 logs whatsapp-broadcast-saas --lines 20 --nostream
